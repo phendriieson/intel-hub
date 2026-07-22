@@ -222,11 +222,18 @@ const db = firebase.database();
 // Rank hierarchy — adjust names as needed, "level" controls permissions.
 // Directorate (level 4) and above can create accounts and assign roles.
 const RANKS = [
-  {name:'Recruit', level:1},
-  {name:'Field Agent', level:2},
-  {name:'Division Lead', level:3},
-  {name:'Directorate', level:4},
-  {name:'Command', level:5},
+  {name:'Intern', level:1},
+  {name:'Junior Agent', level:2},
+  {name:'Agent', level:2},
+  {name:'Senior Agent', level:2},
+  {name:'Advanced Agent', level:2},
+  {name:'Junior Commissar', level:3},
+  {name:'Commissar', level:3},
+  {name:'Senior Commissar', level:3},
+  {name:'Deputy Minister', level:4},
+  {name:'Minister', level:5},
+  {name:'Chairman', level:5},
+  {name:'ZeroPoint Staff', level:5},
 ];
 const DIRECTORATE_LEVEL = 4;
 

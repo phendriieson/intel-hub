@@ -21,16 +21,16 @@
   *{box-sizing:border-box;}
   body{margin:0;background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;}
   ::selection{background:var(--gold);color:#121316;}
-
+ 
   /* texture */
   body::before{
     content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;
     background-image:radial-gradient(rgba(255,255,255,0.015) 1px, transparent 1px);
     background-size:3px 3px;opacity:0.5;
   }
-
+ 
   .app{display:flex;min-height:100vh;}
-
+ 
   /* SIDEBAR */
   .sidebar{
     width:230px;flex-shrink:0;background:var(--panel);
@@ -41,7 +41,7 @@
   .brand-eyebrow{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2px;color:var(--red);text-transform:uppercase;}
   .brand-name{font-family:'Special Elite',cursive;font-size:20px;margin-top:4px;line-height:1.2;}
   .brand-sub{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);margin-top:6px;}
-
+ 
   .nav{display:flex;flex-direction:column;margin-top:6px;}
   .nav-item{
     display:flex;align-items:center;gap:10px;padding:11px 20px;cursor:pointer;
@@ -52,9 +52,9 @@
   .nav-item:hover{color:var(--text);background:rgba(255,255,255,0.02);}
   .nav-item.active{color:var(--text);border-left:2px solid var(--red);background:rgba(179,58,58,0.07);}
   .nav-item.active .tab-idx{color:var(--red);}
-
+ 
   .sidebar-foot{margin-top:auto;padding:16px 20px 0 20px;border-top:1px solid var(--border);font-family:'JetBrains Mono',monospace;font-size:10px;color:#565962;}
-
+ 
   /* MAIN */
   .main{flex:1;padding:36px 44px;max-width:1180px;}
   .page-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:28px;border-bottom:1px solid var(--border);padding-bottom:16px;}
@@ -70,18 +70,18 @@
   .btn.primary:hover{background:#9c3131;color:#fff;}
   .btn.danger{background:transparent;border-color:var(--border);color:#8b6060;font-size:10px;padding:5px 10px;}
   .btn.danger:hover{border-color:var(--red);color:var(--red);}
-
+ 
   /* STAT GRID */
   .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:32px;}
   .stat-card{background:var(--panel);border:1px solid var(--border);padding:18px;position:relative;overflow:hidden;}
   .stat-card::before{content:"";position:absolute;top:0;left:0;width:2px;height:100%;background:var(--teal);}
   .stat-num{font-family:'Special Elite',cursive;font-size:32px;}
   .stat-label{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-top:4px;}
-
+ 
   .section-block{margin-bottom:36px;}
   .section-label{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:10px;}
   .section-label::after{content:"";flex:1;height:1px;background:var(--border);}
-
+ 
   /* CARD (dossier feel) */
   .card{
     background:var(--panel);border:1px solid var(--border);padding:18px 20px;margin-bottom:10px;
@@ -95,7 +95,7 @@
   .stamp.unclassified{color:var(--teal);border-color:var(--teal);}
   .stamp.confidential{color:var(--gold);border-color:var(--gold);}
   .stamp.secret{color:var(--red);border-color:var(--red);}
-
+ 
   .card-row{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;}
   .card-title{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:14px;}
   .card-meta{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);margin-top:5px;}
@@ -108,11 +108,11 @@
   .badge.closed{background:rgba(79,138,139,0.15);color:var(--teal);}
   .badge.planning{background:rgba(201,162,39,0.15);color:var(--gold);}
   .badge.complete{background:rgba(79,138,139,0.15);color:var(--teal);}
-
+ 
   .reliability{display:flex;gap:3px;margin-top:6px;}
   .rdot{width:8px;height:8px;border-radius:50%;background:var(--border);}
   .rdot.on{background:var(--gold);}
-
+ 
   /* FORM PANEL */
   .form-panel{background:var(--panel-2);border:1px solid var(--border);padding:18px 20px;margin-bottom:18px;display:none;}
   .form-panel.open{display:block;}
@@ -126,20 +126,20 @@
   input:focus,select:focus,textarea:focus{outline:none;border-color:var(--teal);}
   textarea{resize:vertical;min-height:70px;}
   .form-actions{display:flex;gap:8px;margin-top:4px;}
-
+ 
   .empty{font-family:'JetBrains Mono',monospace;color:var(--muted);font-size:12px;padding:24px;text-align:center;border:1px dashed var(--border);}
-
+ 
   table{width:100%;border-collapse:collapse;font-size:13px;}
   th{text-align:left;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;padding:8px 10px;border-bottom:1px solid var(--border);}
   td{padding:11px 10px;border-bottom:1px solid var(--border);}
   tr:hover td{background:rgba(255,255,255,0.015);}
   .alias{color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:11px;}
-
+ 
   .view{display:none;}
   .view.active{display:block;}
-
+ 
   .loading{font-family:'JetBrains Mono',monospace;color:var(--muted);font-size:12px;}
-
+ 
   @media (max-width:800px){
     .app{flex-direction:column;}
     .sidebar{width:100%;height:auto;position:relative;flex-direction:row;overflow-x:auto;padding:12px;}
@@ -149,7 +149,7 @@
     .form-grid{grid-template-columns:1fr;}
     .main{padding:20px;}
   }
-
+ 
   /* AUTH SCREEN */
   .auth-wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;}
   .auth-card{width:100%;max-width:380px;background:var(--panel);border:1px solid var(--border);padding:32px 30px;position:relative;}
@@ -168,7 +168,7 @@
 </style>
 </head>
 <body>
-
+ 
 <!-- AUTH SCREEN — shown until Firebase confirms a signed-in user -->
 <div class="auth-wrap" id="auth-screen">
   <div class="auth-card">
@@ -180,7 +180,7 @@
     <div class="auth-error" id="auth-error"></div>
   </div>
 </div>
-
+ 
 <!-- MAIN APP — hidden until authenticated -->
 <div class="app" id="app-root" style="display:none;">
   <div class="sidebar">
@@ -193,12 +193,12 @@
     <div class="nav" id="nav"></div>
     <div class="sidebar-foot">Access logged per session. All records tagged with your rank and department.</div>
   </div>
-
+ 
   <div class="main">
     <div id="root" class="loading">Loading records…</div>
   </div>
 </div>
-
+ 
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
@@ -218,17 +218,18 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const db = firebase.database();
-
+ 
 // Rank hierarchy — adjust names as needed, "level" controls permissions.
 // Directorate (level 4) and above can create accounts and assign roles.
 const RANKS = [
   {name:'Intern', level:1},
   {name:'Junior Agent', level:2},
-  {name:'Agent', level:2},
-  {name:'Senior Agent', level:2},
-  {name:'Advanced Agent', level:2},
-  {name:'Junior Commissar', level:3},
-  {name:'Commissar', level:3},
+  {name:'Agent', level:3},
+  {name:'Senior Agent', level:3},
+  {name:'Advanced Agent', level:3},
+  {name:'Special Operations', level:3},
+  {name:'Junior Commissar', level:4},
+  {name:'Commissar', level:4},
   {name:'Senior Commissar', level:3},
   {name:'Deputy Minister', level:4},
   {name:'Minister', level:5},
@@ -236,12 +237,12 @@ const RANKS = [
   {name:'ZeroPoint Staff', level:5},
 ];
 const DIRECTORATE_LEVEL = 4;
-
+ 
 let currentUser = null; // { uid, name, alias, department, rank, roleLevel }
-
+ 
 const FIREBASE_URL = firebaseConfig.databaseURL;
 const DATA_PATH = `${FIREBASE_URL}/hub_data.json`;
-
+ 
 const VIEWS = [
   {id:'overview', label:'Overview'},
   {id:'roster', label:'Roster'},
@@ -251,9 +252,9 @@ const VIEWS = [
   {id:'ops', label:'Operations'},
   {id:'access', label:'Access Control', minLevel:DIRECTORATE_LEVEL},
 ];
-
+ 
 /* ===================== AUTH ===================== */
-
+ 
 async function loginUser(){
   const email = document.getElementById('li_email').value.trim();
   const pass = document.getElementById('li_pass').value;
@@ -265,11 +266,11 @@ async function loginUser(){
     err.textContent = 'Sign-in failed: ' + e.message;
   }
 }
-
+ 
 async function logoutUser(){
   await auth.signOut();
 }
-
+ 
 auth.onAuthStateChanged(async (user) => {
   if(user){
     try{
@@ -298,10 +299,10 @@ auth.onAuthStateChanged(async (user) => {
     document.getElementById('app-root').style.display = 'none';
   }
 });
-
+ 
 let state = {
   members: [
-    {id:cid(),name:'phendriieson" Doyle',alias:'ECLIPSE',rank:'Minister',division:'Directorate',status:'Active',joined:'2025-03-01'},
+    {id:cid(),name:'Marcus "Fenwick" Doyle',alias:'FENWICK',rank:'Director',division:'Command',status:'active',joined:'2025-03-01'},
     {id:cid(),name:'Priya Anand',alias:'CIPHER',rank:'Division Lead',division:'Cyber',status:'active',joined:'2025-04-11'},
     {id:cid(),name:'Owen Reyes',alias:'SPARROW',rank:'Field Agent',division:'Recon',status:'probation',joined:'2025-11-02'},
   ],
@@ -318,21 +319,16 @@ let state = {
     {id:cid(),name:'Silent Perimeter',status:'active',objective:'Monitor rival server for coordinated raid activity.',assigned:'SPARROW, CIPHER',date:'2026-07-15'},
   ],
 };
-
+ 
 let currentView = 'overview';
 let openForms = {};
-
+ 
 function cid(){return 'id_'+Math.random().toString(36).slice(2,10);}
-
+ 
 async function loadState(){
   try{
-    const res = await fetch(DATA_PATH);
-    if(!res.ok){
-      console.error('Load error: server responded with status', res.status, '— check your FIREBASE_URL.');
-      render(); // fall back to default seed data rather than crashing
-      return;
-    }
-    const remote = await res.json();
+    const snap = await db.ref('hub_data').get();
+    const remote = snap.val();
     // only trust the response if it actually looks like our data shape
     if(remote && Array.isArray(remote.members)){
       state = remote;
@@ -340,23 +336,19 @@ async function loadState(){
       await saveState(); // nothing valid there yet — seed the database with defaults
     }
   }catch(e){
-    console.error('Load error', e);
+    console.error('Load error', e, '— check your Firebase rules and that you are signed in.');
   }
   render();
 }
-
+ 
 async function saveState(){
   try{
-    await fetch(DATA_PATH, {
-      method: 'PUT',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify(state)
-    });
+    await db.ref('hub_data').set(state);
   }catch(e){
     console.error('Save error', e);
   }
 }
-
+ 
 function renderNav(){
   const nav = document.getElementById('nav');
   const visible = VIEWS.filter(v => !v.minLevel || (currentUser && currentUser.roleLevel >= v.minLevel));
@@ -365,17 +357,17 @@ function renderNav(){
       <span class="tab-idx">0${i+1}</span> ${v.label.toUpperCase()}
     </div>`).join('');
 }
-
+ 
 function switchView(id){
   currentView = id;
   render();
 }
-
+ 
 function toggleForm(key){
   openForms[key] = !openForms[key];
   render();
 }
-
+ 
 async function addRecord(type){
   const get = (name) => document.getElementById(`f_${type}_${name}`)?.value?.trim() || '';
   let entry;
@@ -401,20 +393,20 @@ async function addRecord(type){
   await saveState();
   render();
 }
-
+ 
 async function deleteRecord(type, id){
   state[type] = state[type].filter(r=>r.id!==id);
   await saveState();
   render();
 }
-
+ 
 function stampFor(seed){
   const opts = ['unclassified','confidential','secret'];
   const idx = Math.abs(hashStr(seed)) % opts.length;
   return opts[idx];
 }
 function hashStr(s){let h=0;for(let i=0;i<s.length;i++){h=((h<<5)-h)+s.charCodeAt(i);h|=0;}return h;}
-
+ 
 function renderOverview(){
   return `
     <div class="page-head">
@@ -429,19 +421,19 @@ function renderOverview(){
       <div class="stat-card"><div class="stat-num">${state.cases.filter(c=>c.status==='open').length}</div><div class="stat-label">Open Cases</div></div>
       <div class="stat-card"><div class="stat-num">${state.ops.filter(o=>o.status==='active').length}</div><div class="stat-label">Active Operations</div></div>
     </div>
-
+ 
     <div class="section-block">
       <div class="section-label">Latest Memorandum</div>
       ${state.memos.length ? renderMemoCard(state.memos[state.memos.length-1]) : '<div class="empty">No memorandums filed.</div>'}
     </div>
-
+ 
     <div class="section-block">
       <div class="section-label">Open Cases</div>
       ${state.cases.filter(c=>c.status==='open').slice(0,3).map(renderCaseCard).join('') || '<div class="empty">No open cases.</div>'}
     </div>
   `;
 }
-
+ 
 function renderRoster(){
   return `
     <div class="page-head">
@@ -487,7 +479,7 @@ function renderRoster(){
     </table>` : '<div class="empty">No members on file.</div>'}
   `;
 }
-
+ 
 function renderInformants(){
   return `
     <div class="page-head">
@@ -522,7 +514,7 @@ function renderInformants(){
       </div>`).join('') : '<div class="empty">No informants on file.</div>'}
   `;
 }
-
+ 
 function renderCaseCard(c){
   return `
     <div class="card">
@@ -538,7 +530,7 @@ function renderCaseCard(c){
       <div class="form-actions" style="margin-top:12px;"><button class="btn danger" onclick="deleteRecord('cases','${c.id}')">Remove</button></div>
     </div>`;
 }
-
+ 
 function renderCases(){
   return `
     <div class="page-head">
@@ -569,7 +561,7 @@ function renderCases(){
     ${state.cases.length ? state.cases.map(renderCaseCard).join('') : '<div class="empty">No cases on file.</div>'}
   `;
 }
-
+ 
 function renderMemoCard(m){
   return `
     <div class="card">
@@ -580,7 +572,7 @@ function renderMemoCard(m){
       <div class="form-actions" style="margin-top:12px;"><button class="btn danger" onclick="deleteRecord('memos','${m.id}')">Remove</button></div>
     </div>`;
 }
-
+ 
 function renderMemos(){
   return `
     <div class="page-head">
@@ -606,7 +598,7 @@ function renderMemos(){
     ${state.memos.length ? [...state.memos].reverse().map(renderMemoCard).join('') : '<div class="empty">No memorandums filed.</div>'}
   `;
 }
-
+ 
 function renderOps(){
   return `
     <div class="page-head">
@@ -647,12 +639,12 @@ function renderOps(){
       </div>`).join('') : '<div class="empty">No operations on file.</div>'}
   `;
 }
-
+ 
 function esc(s){
   if(s===undefined||s===null) return '';
   return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 }
-
+ 
 function renderAccessControl(){
   if(!currentUser || currentUser.roleLevel < DIRECTORATE_LEVEL){
     return '<div class="empty">Directorate clearance required to view this page.</div>';
@@ -688,7 +680,7 @@ function renderAccessControl(){
     </div>
   `;
 }
-
+ 
 async function createMemberAccount(){
   const name = document.getElementById('ac_name').value.trim();
   const alias = document.getElementById('ac_alias').value.trim();
@@ -698,13 +690,13 @@ async function createMemberAccount(){
   const pass = document.getElementById('ac_pass').value;
   const status = document.getElementById('ac-status');
   status.textContent = '';
-
+ 
   if(!name || !email || pass.length < 6){
     status.textContent = 'Fill in all fields — password must be 6+ characters.';
     return;
   }
   const rank = RANKS.find(r => r.name === rankName);
-
+ 
   // Create the new user on a SEPARATE Firebase app instance so it doesn't
   // sign you (the admin) out of your own session in the process.
   let secondaryApp;
@@ -726,7 +718,7 @@ async function createMemberAccount(){
     status.textContent = 'Failed to create account: ' + e.message;
   }
 }
-
+ 
 async function loadUserList(){
   const el = document.getElementById('ac-userlist');
   if(!el) return;
@@ -752,7 +744,7 @@ async function loadUserList(){
     el.textContent = 'Could not load account list: ' + e.message;
   }
 }
-
+ 
 async function removeMemberAccount(uid, name){
   if(!confirm(`Remove ${name}'s access? This deletes their profile immediately — they'll be signed out and blocked from signing back in. This does NOT delete their Firebase Authentication login entry; to fully remove that too, delete them in Firebase Console → Authentication → Users.`)) return;
   try{
@@ -762,7 +754,7 @@ async function removeMemberAccount(uid, name){
     alert('Failed to remove account: ' + e.message);
   }
 }
-
+ 
 function render(){
   renderNav();
   const root = document.getElementById('root');
@@ -781,3 +773,4 @@ function render(){
 </script>
 </body>
 </html>
+ 
